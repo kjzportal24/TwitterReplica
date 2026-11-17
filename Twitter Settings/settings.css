@@ -1,0 +1,225 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: #14171a;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 285px 440px 1fr;
+    min-height: 100vh;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+    padding: 25px;
+    border-right: 1px solid #e1e8ed;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    color: #1da1f2;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 5px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.nav-item:hover {
+    background: #e8f5fe;
+    color: #1da1f2;
+}
+
+.tweet-btn {
+    margin-top: 25px;
+    background: #1da1f2;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tweet-btn:hover {
+    background: #168bd2;
+}
+
+.profile {
+    margin-top: auto;
+    padding: 15px 0;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile span {
+    color: #657786;
+}
+
+/* SETTINGS MENU */
+.settings-menu {
+    border-right: 1px solid #e1e8ed;
+}
+
+.settings-menu h2 {
+    padding: 25px;
+    font-size: 26px;
+}
+
+#searchSettings {
+    margin: 10px 17px;
+    width: calc(100% - 34px);
+    padding: 16px;
+    border: 1px solid #ccd6dd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchSettings:focus {
+    border-color: #1da1f2;
+}
+
+.setting-option {
+    padding: 22px 25px;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.setting-option:hover {
+    background: #f5f8fa;
+}
+
+.setting-option.active {
+    border-left: 4px solid #1da1f2;
+    background: #f0f8ff;
+}
+
+/* MAIN CONTENT */
+.content {
+    padding: 27px 30px;
+}
+
+.content h2 {
+    font-size: 26px;
+    margin-bottom: 28px;
+}
+
+.description {
+    color: #536471;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.account-option {
+    padding: 25px 10px;
+    border-top: 1px solid #e1e8ed;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    cursor: pointer;
+}
+
+.account-option:hover {
+    background: #f5f8fa;
+}
+
+.option-icon {
+    font-size: 25px;
+    color: #657786;
+    width: 30px;
+    text-align: center;
+}
+
+.option-text h3 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.option-text p {
+    color: #536471;
+    font-size: 16px;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 25px;
+    color: #657786;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .nav-item {
+        font-size: 0;
+        justify-content: center;
+    }
+
+    .nav-item span {
+        display: none;
+    }
+
+    .tweet-btn {
+        font-size: 0;
+    }
+
+    .settings-menu {
+        display: none;
+    }
+
+    .content {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: 65px 1fr;
+    }
+
+    .content {
+        padding: 20px 12px;
+    }
+
+    .account-option {
+        gap: 12px;
+    }
+
+    .option-text p {
+        font-size: 13px;
+    }
+}
+  
